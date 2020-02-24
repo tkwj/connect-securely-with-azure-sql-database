@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightQuoteCloud-3-ADinteractive", "FightQuoteCloud-3-ADinteractive\FightQuoteCloud-3-ADinteractive.csproj", "{803BFD79-842A-49D8-9DAA-17849DEE70FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightQuoteCloud-4-Token", "FightQuoteCloud-4-Token\FightQuoteCloud-4-Token.csproj", "{33EDD05B-CD82-469C-AD71-190C26246202}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightQuoteCloud-5-TokenEF6", "FightQuoteCloud-5-TokenEF6\FightQuoteCloud-5-TokenEF6.csproj", "{2FD66100-D353-422D-BBA2-E282741B6BF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightQuoteLibrary", "FightQuoteLibrary\FightQuoteLibrary.csproj", "{FC439A45-884E-4BC5-B7C7-037FBB9E36A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightQuote-1-LocalIntegratedSecurity", "FightQuote-1-LocalIntegratedSecurity\FightQuote-1-LocalIntegratedSecurity.csproj", "{B4370B03-CBC9-41F8-A3D5-FDF501833324}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightQuoteCloud-2-NameAndPassword", "FightQuoteCloud-2-NameAndPassword\FightQuoteCloud-2-NameAndPassword.csproj", "{68EEB864-07C9-40EB-AF91-772F5362C8FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{803BFD79-842A-49D8-9DAA-17849DEE70FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{803BFD79-842A-49D8-9DAA-17849DEE70FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{803BFD79-842A-49D8-9DAA-17849DEE70FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{803BFD79-842A-49D8-9DAA-17849DEE70FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33EDD05B-CD82-469C-AD71-190C26246202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33EDD05B-CD82-469C-AD71-190C26246202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33EDD05B-CD82-469C-AD71-190C26246202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33EDD05B-CD82-469C-AD71-190C26246202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FD66100-D353-422D-BBA2-E282741B6BF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FD66100-D353-422D-BBA2-E282741B6BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FD66100-D353-422D-BBA2-E282741B6BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FD66100-D353-422D-BBA2-E282741B6BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC439A45-884E-4BC5-B7C7-037FBB9E36A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC439A45-884E-4BC5-B7C7-037FBB9E36A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC439A45-884E-4BC5-B7C7-037FBB9E36A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC439A45-884E-4BC5-B7C7-037FBB9E36A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4370B03-CBC9-41F8-A3D5-FDF501833324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4370B03-CBC9-41F8-A3D5-FDF501833324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4370B03-CBC9-41F8-A3D5-FDF501833324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4370B03-CBC9-41F8-A3D5-FDF501833324}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68EEB864-07C9-40EB-AF91-772F5362C8FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68EEB864-07C9-40EB-AF91-772F5362C8FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68EEB864-07C9-40EB-AF91-772F5362C8FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68EEB864-07C9-40EB-AF91-772F5362C8FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C04D4F1E-C9A3-48E4-AF09-ABC3036015E6}
+	EndGlobalSection
+EndGlobal

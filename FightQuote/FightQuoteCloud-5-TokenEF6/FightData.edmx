@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ufcdataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="fighter_details">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fighter_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Height" Type="nvarchar" MaxLength="50" />
+          <Property Name="Weight" Type="nvarchar" MaxLength="50" />
+          <Property Name="Reach" Type="nvarchar" MaxLength="50" />
+          <Property Name="Stance" Type="nvarchar" MaxLength="50" />
+          <Property Name="DOB" Type="date" />
+        </EntityType>
+        <EntityType Name="total_fight_data">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="R_fighter" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="B_fighter" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="R_KD" Type="tinyint" Nullable="false" />
+          <Property Name="B_KD" Type="tinyint" Nullable="false" />
+          <Property Name="R_SIG_STR" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="B_SIG_STR" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="R_SIG_STR_pct" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="B_SIG_STR_pct" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="R_TOTAL_STR" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="B_TOTAL_STR" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="R_TD" Type="time" Precision="7" Nullable="false" />
+          <Property Name="B_TD" Type="time" Precision="7" Nullable="false" />
+          <Property Name="R_TD_pct" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="B_TD_pct" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="R_SUB_ATT" Type="tinyint" Nullable="false" />
+          <Property Name="B_SUB_ATT" Type="tinyint" Nullable="false" />
+          <Property Name="R_PASS" Type="tinyint" Nullable="false" />
+          <Property Name="B_PASS" Type="tinyint" Nullable="false" />
+          <Property Name="R_REV" Type="tinyint" Nullable="false" />
+          <Property Name="B_REV" Type="tinyint" Nullable="false" />
+          <Property Name="R_HEAD" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="B_HEAD" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="R_BODY" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="B_BODY" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="R_LEG" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="B_LEG" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="R_DISTANCE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="B_DISTANCE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="R_CLINCH" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="B_CLINCH" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="R_GROUND" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="B_GROUND" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="win_by" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="last_round" Type="tinyint" Nullable="false" />
+          <Property Name="last_round_time" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Format" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Referee" Type="nvarchar" MaxLength="50" />
+          <Property Name="date" Type="date" Nullable="false" />
+          <Property Name="location" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Fight_type" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Winner" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ufcdata.dbo.quick_fight_facts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="quick_fight_facts">
+          <Key>
+            <PropertyRef Name="win_by" />
+            <PropertyRef Name="Format" />
+            <PropertyRef Name="Referee" />
+            <PropertyRef Name="date" />
+            <PropertyRef Name="location" />
+            <PropertyRef Name="Fight_type" />
+            <PropertyRef Name="Winner" />
+            <PropertyRef Name="Loser" />
+          </Key>
+          <Property Name="win_by" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Format" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Referee" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="date" Type="date" Nullable="false" />
+          <Property Name="location" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Fight_type" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Winner" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Loser" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ufcdata.dbo.random_fight_fact' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <Function Name="get_random_fight_fact" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="ufcdataModelStoreContainer">
+          <EntitySet Name="fighter_details" EntityType="Self.fighter_details" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="total_fight_data" EntityType="Self.total_fight_data" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="quick_fight_facts" EntityType="Self.quick_fight_facts" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [quick_fight_facts].[win_by] AS [win_by], 
+    [quick_fight_facts].[Format] AS [Format], 
+    [quick_fight_facts].[Referee] AS [Referee], 
+    [quick_fight_facts].[date] AS [date], 
+    [quick_fight_facts].[location] AS [location], 
+    [quick_fight_facts].[Fight_type] AS [Fight_type], 
+    [quick_fight_facts].[Winner] AS [Winner], 
+    [quick_fight_facts].[Loser] AS [Loser]
+    FROM [dbo].[quick_fight_facts] AS [quick_fight_facts]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ufcdataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ufcdataEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="get_random_fight_fact" ReturnType="Collection(ufcdataModel.get_random_fight_fact_Result)" />
+          <EntitySet Name="fighter_details" EntityType="ufcdataModel.fighter_details" />
+          <EntitySet Name="total_fight_data" EntityType="ufcdataModel.total_fight_data" />
+          <EntitySet Name="quick_fight_facts" EntityType="ufcdataModel.quick_fight_facts" />
+        </EntityContainer>
+        <ComplexType Name="get_random_fight_fact_Result">
+          <Property Type="String" Name="win_by" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Format" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Referee" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="date" Nullable="false" />
+          <Property Type="String" Name="location" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Fight_type" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Winner" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Loser" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <EntityType Name="fighter_details">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fighter_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Height" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Weight" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Reach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Stance" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="total_fight_data">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="R_fighter" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="B_fighter" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="R_KD" Type="Byte" Nullable="false" />
+          <Property Name="B_KD" Type="Byte" Nullable="false" />
+          <Property Name="R_SIG_STR" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="B_SIG_STR" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="R_SIG_STR_pct" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="B_SIG_STR_pct" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="R_TOTAL_STR" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="B_TOTAL_STR" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="R_TD" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="B_TD" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="R_TD_pct" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="B_TD_pct" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="R_SUB_ATT" Type="Byte" Nullable="false" />
+          <Property Name="B_SUB_ATT" Type="Byte" Nullable="false" />
+          <Property Name="R_PASS" Type="Byte" Nullable="false" />
+          <Property Name="B_PASS" Type="Byte" Nullable="false" />
+          <Property Name="R_REV" Type="Byte" Nullable="false" />
+          <Property Name="B_REV" Type="Byte" Nullable="false" />
+          <Property Name="R_HEAD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="B_HEAD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="R_BODY" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="B_BODY" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="R_LEG" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="B_LEG" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="R_DISTANCE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="B_DISTANCE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="R_CLINCH" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="B_CLINCH" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="R_GROUND" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="B_GROUND" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="win_by" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="last_round" Type="Byte" Nullable="false" />
+          <Property Name="last_round_time" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="Format" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Referee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="location" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fight_type" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Winner" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="quick_fight_facts">
+          <Key>
+            <PropertyRef Name="win_by" />
+            <PropertyRef Name="Format" />
+            <PropertyRef Name="Referee" />
+            <PropertyRef Name="date" />
+            <PropertyRef Name="location" />
+            <PropertyRef Name="Fight_type" />
+            <PropertyRef Name="Winner" />
+            <PropertyRef Name="Loser" />
+          </Key>
+          <Property Name="win_by" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Format" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Referee" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="location" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fight_type" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Winner" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Loser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ufcdataModelStoreContainer" CdmEntityContainer="ufcdataEntities" >
+          <FunctionImportMapping FunctionImportName="get_random_fight_fact" FunctionName="ufcdataModel.Store.get_random_fight_fact">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ufcdataModel.get_random_fight_fact_Result">
+                <ScalarProperty Name="win_by" ColumnName="win_by" />
+                <ScalarProperty Name="Format" ColumnName="Format" />
+                <ScalarProperty Name="Referee" ColumnName="Referee" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="Fight_type" ColumnName="Fight_type" />
+                <ScalarProperty Name="Winner" ColumnName="Winner" />
+                <ScalarProperty Name="Loser" ColumnName="Loser" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="fighter_details">
+            <EntityTypeMapping TypeName="ufcdataModel.fighter_details">
+              <MappingFragment StoreEntitySet="fighter_details">
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Stance" ColumnName="Stance" />
+                <ScalarProperty Name="Reach" ColumnName="Reach" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="fighter_name" ColumnName="fighter_name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="total_fight_data">
+            <EntityTypeMapping TypeName="ufcdataModel.total_fight_data">
+              <MappingFragment StoreEntitySet="total_fight_data">
+                <ScalarProperty Name="Winner" ColumnName="Winner" />
+                <ScalarProperty Name="Fight_type" ColumnName="Fight_type" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="Referee" ColumnName="Referee" />
+                <ScalarProperty Name="Format" ColumnName="Format" />
+                <ScalarProperty Name="last_round_time" ColumnName="last_round_time" />
+                <ScalarProperty Name="last_round" ColumnName="last_round" />
+                <ScalarProperty Name="win_by" ColumnName="win_by" />
+                <ScalarProperty Name="B_GROUND" ColumnName="B_GROUND" />
+                <ScalarProperty Name="R_GROUND" ColumnName="R_GROUND" />
+                <ScalarProperty Name="B_CLINCH" ColumnName="B_CLINCH" />
+                <ScalarProperty Name="R_CLINCH" ColumnName="R_CLINCH" />
+                <ScalarProperty Name="B_DISTANCE" ColumnName="B_DISTANCE" />
+                <ScalarProperty Name="R_DISTANCE" ColumnName="R_DISTANCE" />
+                <ScalarProperty Name="B_LEG" ColumnName="B_LEG" />
+                <ScalarProperty Name="R_LEG" ColumnName="R_LEG" />
+                <ScalarProperty Name="B_BODY" ColumnName="B_BODY" />
+                <ScalarProperty Name="R_BODY" ColumnName="R_BODY" />
+                <ScalarProperty Name="B_HEAD" ColumnName="B_HEAD" />
+                <ScalarProperty Name="R_HEAD" ColumnName="R_HEAD" />
+                <ScalarProperty Name="B_REV" ColumnName="B_REV" />
+                <ScalarProperty Name="R_REV" ColumnName="R_REV" />
+                <ScalarProperty Name="B_PASS" ColumnName="B_PASS" />
+                <ScalarProperty Name="R_PASS" ColumnName="R_PASS" />
+                <ScalarProperty Name="B_SUB_ATT" ColumnName="B_SUB_ATT" />
+                <ScalarProperty Name="R_SUB_ATT" ColumnName="R_SUB_ATT" />
+                <ScalarProperty Name="B_TD_pct" ColumnName="B_TD_pct" />
+                <ScalarProperty Name="R_TD_pct" ColumnName="R_TD_pct" />
+                <ScalarProperty Name="B_TD" ColumnName="B_TD" />
+                <ScalarProperty Name="R_TD" ColumnName="R_TD" />
+                <ScalarProperty Name="B_TOTAL_STR" ColumnName="B_TOTAL_STR" />
+                <ScalarProperty Name="R_TOTAL_STR" ColumnName="R_TOTAL_STR" />
+                <ScalarProperty Name="B_SIG_STR_pct" ColumnName="B_SIG_STR_pct" />
+                <ScalarProperty Name="R_SIG_STR_pct" ColumnName="R_SIG_STR_pct" />
+                <ScalarProperty Name="B_SIG_STR" ColumnName="B_SIG_STR" />
+                <ScalarProperty Name="R_SIG_STR" ColumnName="R_SIG_STR" />
+                <ScalarProperty Name="B_KD" ColumnName="B_KD" />
+                <ScalarProperty Name="R_KD" ColumnName="R_KD" />
+                <ScalarProperty Name="B_fighter" ColumnName="B_fighter" />
+                <ScalarProperty Name="R_fighter" ColumnName="R_fighter" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="quick_fight_facts">
+            <EntityTypeMapping TypeName="ufcdataModel.quick_fight_facts">
+              <MappingFragment StoreEntitySet="quick_fight_facts">
+                <ScalarProperty Name="Loser" ColumnName="Loser" />
+                <ScalarProperty Name="Winner" ColumnName="Winner" />
+                <ScalarProperty Name="Fight_type" ColumnName="Fight_type" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="Referee" ColumnName="Referee" />
+                <ScalarProperty Name="Format" ColumnName="Format" />
+                <ScalarProperty Name="win_by" ColumnName="win_by" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
+    </startup>
+  <connectionStrings configProtectionProvider="DataProtectionConfigurationProvider">
+    <EncryptedData>
+      <CipherData>
+        <CipherValue>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApfrOgFjCd0eqvigL0DaSmwQAAAACAAAAAAAQZgAAAAEAACAAAAB+CZXnxp+GYVXNMNQ9mfJQGJRIyA1KJB5j3ikU2rHiAwAAAAAOgAAAAAIAACAAAAA85kFu49YtY5LcQcsPWqnbRYx9kN+jRjiOY5Rx5tkroKABAACwgNy93/iOEAmg62yzvgO34cJi4fuQPANrPeGFAl0qEvUY6SZOavfxFcwnnKeceQNE6kbBVtv2tv5N+xDzFmXhIylwJH9tXsazpXoopNOCg3GThZrlIscGlfyUJN4XS/AuGrsV3816MKdrdjQFhcMUt0pcXdxTz+WFibjvvgTNk0HuYDPf9sa8YduPIoHDTNxFrIExhQH12XEJBAeAY6u3iXVG1hhuwR5hs/km8bPiPXzp6RBjw9XYzt6G6SUpH3d95+vfSDSh6oL4SHaMSmCsh2aurlunwtHVPtwgZOz5CkLg2Il0OqyXecOQgyvXYHorpLHgjl7hbxOSWSwc3QHJND1+RozXTm8TcIMMXRfXtAI2e0O0QilFRh9ie/T7HKPhH0WiBT/Nu7MrEbHwwE9jkrSW2xMZl+ogl7mb0vcI7t5lpt3kEr4z8aP+wq6MDHQwZtYVf1OlTgJfhVcCv1/+b9FIA4aYXUsie8LfL+ke8ZsvNDdMs+FhM9+4CZgVsqJ4QYgIUPOKB8On6V0ByXUqaHSvpVqYWuPch3+LN4cIgkAAAADI9tT9EGNQ49BhphBmP2OrvKPbxrjdTCCfwBHpTuON5IocTTYMlcreT4XKfYdgJNdfLSwfqUP5hNQRK99tMW+S</CipherValue>
+      </CipherData>
+    </EncryptedData>
+  </connectionStrings>
+</configuration>
