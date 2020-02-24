@@ -21,6 +21,3 @@ ALTER ROLE loginmanager ADD MEMBER LoginMgmtUser;
 --Available view
 select * from sys.sql_logins
 
-
-
-CREATE LOGIN AWorker WITH PASSWORD = 'tKwjbaw333333!!!';
